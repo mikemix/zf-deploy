@@ -764,6 +764,13 @@ class Deploy
         $dirPos = strlen($dir) + 1;
         switch ($format) {
             case 'zip':
+                foreach ($files as $name => $file) {
+                    $escapedFile = str_replace('\\', '/', $file);
+                    $escapedPath = substr($escapedFile, $dirPos);
+
+                    $packager->addFile($escapedFile , $escapedPath);
+                }
+                break;
             case 'zpk':
                 foreach ($files as $name => $file) {
                     $packager->addFile($file, substr($file, $dirPos));
