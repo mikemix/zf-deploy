@@ -1,5 +1,5 @@
 {
-    "name": "zfcampus/zf-deploy",
+    "name": "mikemix/zf-deploy",
     "description": "Deployment tool for ZF2 application",
     "type": "library",
     "license": "BSD-3-Clause",
